@@ -14,13 +14,12 @@ namespace Empolyee_Wage
             int isPresent = random.Next(0, 3);
             int dayHour = 8;
             int wagePerHour = 20;
-            int dailyWage = 0;
             int partimeHour = 4;
             int dayPerMonth = 20;
             int totalHour = 0;
-           
+            int i = 0;
 
-            for (int i = 0; i < dayPerMonth; i++)
+            while (totalHour<=100 && i <=dayPerMonth)
             {
 
                 switch (isPresent)
@@ -41,13 +40,12 @@ namespace Empolyee_Wage
                         
                 }
 
+                i++;
+
             }
 
             int monthlyWage= totalHour*wagePerHour;
             Console.WriteLine($"{name} Monthly wage= {monthlyWage}");
-                    
-
-            
             
         }
     }
